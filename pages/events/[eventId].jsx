@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 import { getEventById } from "../../dummy-data.js";
 import EventSummary from "../../components/event-detail/event-summary";
-import EventLogistics from "../../components/event-detail/event-logistics.js";
+import EventLogistics from "../../components/event-detail/event-logistics";
 import EventContent from "../../components/event-detail/event-content";
 
 function EventDetailPage() {
