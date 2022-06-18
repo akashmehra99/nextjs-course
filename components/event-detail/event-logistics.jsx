@@ -21,8 +21,8 @@ function EventLogistics(props) {
         <Image
           src={`/${image}`}
           alt={imageAlt}
-          width={"200px"}
-          height={"200px"}
+          width={"400px"}
+          height={"400px"}
         />
       </div>
       <ul className={classes.list}>
