@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# dummy data-base
+/dummy-data-base
