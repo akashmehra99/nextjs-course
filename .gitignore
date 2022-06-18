@@ -32,4 +32,4 @@ yarn-error.log*
 .vercel
 
 # dummy data-base
-/dummy-data-base
+dummy_data_base

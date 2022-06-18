@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "start-api": "json-server --watch ./dummy-data-base/db.json -p 3030"
+    "start-api": "json-server --watch ./dummy_data_base/db.json -p 3030"
   },
   "dependencies": {
     "next": "12.1.6",
