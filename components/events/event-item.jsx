@@ -16,7 +16,7 @@ function EventItem(props) {
   const formatAddress = location && location.replace(", ", "\n");
   return (
     <li className={styles.item}>
-      <Image src={`/${image}`} alt={title} width={"200px"} height={"200px"} />
+      <Image src={`/${image}`} alt={title} width={"200px"} height={"200px"} priority="true" />
       <div className={styles.content}>
         <div className={styles.summary}>
           <h2>{title}</h2>
