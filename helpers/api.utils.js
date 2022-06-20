@@ -15,8 +15,9 @@ class EventsAPI {
   }
 
   async getFeaturedEvents() {
-    const events = await this.getAllEvents();
-    return events.filter((event) => event.isFeatured);
+    const response = await fetch(`${this.events_api}/?isFeatured=true`);
+    const featuredEvents = await response.json();
+    return featuredEvents;
   }
 
   async getEventById(eventId) {
@@ -31,19 +32,13 @@ class EventsAPI {
 
   async getFilteredEvents(dateFilter) {
     const { year, month } = dateFilter;
-    let filteredEvents = [];
     try{
-      const events = await this.getAllEvents();
-      filteredEvents = events.filter((event) => {
-        const eventDate = new Date(event.date);
-        return (
-          eventDate.getFullYear() === year && eventDate.getMonth() === month - 1
-        );
-      });
+      const response = await fetch(`${this.events_api}/?month=${month}&&year=${year}`);
+      const filteredEvents = await response.json();
+      return filteredEvents;
     } catch (error) {
       console.error("Error in getting filtered events");
     }
-    return filteredEvents;
   }
 }
 
